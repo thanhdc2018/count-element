@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+</head>
+<body>
+<button type = "button" onclick = "(findinArray(parseInt(prompt('Nhập vào số để tìm: '))))"> Tìm 1 số có xuất hiện trong mảng bao nhiêu lần</button>
+<script>
+    function findinArray(x){
+        let a = [];
+        let show1 = "";
+        let c = 0;
+        for ( let i = 0; i < 10; i++){
+            a.push(Math.floor((Math.random()*100)-50));
+            show1 = show1 + a[i] + " , ";
+        }
+        for (i = 0; i < a.length; i++){
+            if ( a[i] === x){
+                c++;
+            }
+        }document.write("Các phần tử của mảng là: " + show1 + "<br/>");
+        document.write(x +" xuất hiện trong mảng " + c + " lần");
+    }
+</script>
+</body>
+</html>
